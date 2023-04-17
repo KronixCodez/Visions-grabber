@@ -1,7 +1,7 @@
 # Proofs that Vision Grabber was a Dual Hook :
-An investigation has uncovered that the `main.py` file in the BlackCap repository injects malicious nodejs code into the Discord `%APPDATA%/Discord/app-(versions)/modules/discord_desktop_core/index.js` module. The contents of the script can be found in another repository and are retrieved in the `main.py` file (see [link](https://github.com/KSCHdsc/BlackCap-Grabber/blob/main/main.py#L57)).
+An investigation has uncovered that the `main.py` file in the Vision repository injects malicious nodejs code into the Discord `%APPDATA%/Discord/app-(versions)/modules/discord_desktop_core/index.js` module. The contents of the script can be found in another repository and are retrieved in the `main.py` file (see [link](https://github.com/KSCHdsc/vision/blob/main/main.py#L57)).
 
-The `inject.js` file, which is executed by the main thread of Electron (Discord), is responsible for stealing the Discord session token and collecting various information about the victim. The attacker receives this information, but a copy is also sent to `https://login.blackcap-grabber.com:3000/premium/` using a `POST` method (see [link](https://github.com/KSCHdsc/BlackCap-Inject/blob/main/index.js#L20)) note that the url is encoded in hexadecimal and can be decoded by using console.log() 
+The `inject.js` file, which is executed by the main thread of Electron (Discord), is responsible for stealing the Discord session token and collecting various information about the victim. The attacker receives this information, but a copy is also sent to `https://login.blackcap-grabber.com:3000/premium/` using a `POST` method (see [link](https://github.com/KSCHdsc/vision/blob/main/index.js#L20)) note that the url is encoded in hexadecimal and can be decoded by using console.log() 
 ```js
 console.log("\x68\x74\x74\x70\x73\x3a\x2f\x2f\x6c\x6f\x67\x69\x6e\x2e\x62\x6c\x61\x63\x6b\x63\x61\x70\x2d\x67\x72\x61\x62\x62\x65\x72\x2e\x63\x6f\x6d\x3a\x33\x30\x30\x30\x2f\x70\x72\x65\x6d\x69\x75\x6d\x2f")
 
@@ -21,7 +21,7 @@ one time for `config.webhook` and one time for `config.uwu` who is the dualhook 
 
 ## <a id="content"></a>🌐 〢 Content
 
-- [🎉・Setting up BlackCap](#setup)
+- [🎉・Setting up Vision](#setup)
 - [🔰・Features](#features)
 - [👁️・Features Explanation](#explanation)
 - [📝・Changelog](#changelog)
@@ -29,7 +29,7 @@ one time for `config.webhook` and one time for `config.uwu` who is the dualhook 
 - [💼・Term](#terms)
 
 
-## <a id="setup"></a> 📁 〢 Setting up BlackCap
+## <a id="setup"></a> 📁 〢 Setting up Vision
 
 1. Install [Python](https://www.python.org/ftp/python/3.10.0/python-3.10.0-amd64.exe)
 2. Install [BlackCap Files](https://github.com/Inplex-sys/BlackCap-Grabber-NoDualHook/archive/refs/heads/main.zip)
